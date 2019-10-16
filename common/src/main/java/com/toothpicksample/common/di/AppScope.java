@@ -1,4 +1,4 @@
-package com.toothpicksample.sample.di;
+package com.toothpicksample.common.di;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;

@@ -14,7 +14,7 @@ object AppModule
 {
     @JvmStatic
     @Provides
-    @Singleton
+    @AppScope
     fun context(application: Application): Context
     {
         return application.applicationContext
@@ -22,7 +22,7 @@ object AppModule
 
     @Provides
     @JvmStatic
-    @Singleton
+    @AppScope
     fun schedulerManager(): BaseSchedulerManager{
         return SchedulerManager()
     }
