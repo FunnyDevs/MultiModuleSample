@@ -5,7 +5,9 @@ import com.toothpicksample.common.di.AppComponent
 import com.toothpicksample.feature1.Feature1Controller
 import dagger.BindsInstance
 import dagger.Component
+import javax.inject.Singleton
 
+@Feature1Scope
 @Component(modules = [Feature1Module::class], dependencies = [AppComponent::class])
 interface Feature1Component {
 

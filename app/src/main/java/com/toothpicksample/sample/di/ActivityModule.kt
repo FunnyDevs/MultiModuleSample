@@ -6,9 +6,12 @@ import com.bluelinelabs.conductor.Conductor
 import com.bluelinelabs.conductor.Router
 import com.toothpicksample.common.BaseActivity
 import com.toothpicksample.common.navigator.Navigator
+import com.toothpicksample.common.rx.BaseSchedulerManager
+import com.toothpicksample.common.rx.SchedulerManager
 import com.toothpicksample.sample.AppNavigator
 import dagger.Module
 import dagger.Provides
+import javax.inject.Singleton
 
 @Module
 object ActivityModule {
@@ -26,4 +29,5 @@ object ActivityModule {
     {
         return AppNavigator(router)
     }
+
 }

@@ -1,6 +1,5 @@
-package com.toothpicksample.common
+package com.toothpicksample.common.di
 
-import android.view.View
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import javax.inject.Inject

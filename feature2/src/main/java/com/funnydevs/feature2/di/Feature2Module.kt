@@ -3,8 +3,9 @@ package com.toothpicksample.feature1.di
 import android.os.Bundle
 import androidx.lifecycle.ViewModel
 import com.funnydevs.feature2.Feature2ViewModel
-import com.toothpicksample.common.BaseViewModelFactory
+import com.toothpicksample.common.di.BaseViewModelFactory
 import com.toothpicksample.common.di.ViewModelKey
+import com.toothpicksample.common.rx.BaseSchedulerManager
 import dagger.Module
 import dagger.Provides
 import dagger.multibindings.IntoMap
@@ -17,8 +18,8 @@ object Feature2Module
     @IntoMap
     @ViewModelKey(Feature2ViewModel::class)
     @JvmStatic
-    fun viewModel(prova:String?): ViewModel {
-        return Feature2ViewModel(prova)
+    fun viewModel(baseSchedulerManager: BaseSchedulerManager,prova:String?): ViewModel {
+        return Feature2ViewModel(baseSchedulerManager,prova)
     }
 
     @Provides
