@@ -19,5 +19,11 @@ android {
 
 dependencies {
 
+    api project(libraries.common)
     kapt libraries.dagger_compiler
+
+
+    testImplementation libraries.junit
+    androidTestImplementation libraries.runner
+    androidTestImplementation libraries.espresso_core
 }

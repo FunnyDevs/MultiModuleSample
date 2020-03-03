@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import com.funnydevs.base.BaseController
 import com.funnydevs.feature1.di.DaggerFeature2Component
+import com.funnydevs.hoop.common.di.AppInjectHelper
 
 class Feature2Controller(args: Bundle?) : BaseController<Feature2ViewModel>(args) {
 
@@ -22,7 +23,7 @@ class Feature2Controller(args: Bundle?) : BaseController<Feature2ViewModel>(args
     override fun injectDependencies() {
 
         DaggerFeature2Component.factory()
-            .create(args,coreComponent())
+            .create(args,AppInjectHelper.provideCoreComponent(applicationContext!!))
             .inject(this)
 
     }

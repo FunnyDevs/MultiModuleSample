@@ -35,12 +35,15 @@ ext.libraries = [
         //3rd
         kotlin                  : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
         conductor               : "com.bluelinelabs:conductor:$versions.conductor",
+        conductor_autodispose   : "com.bluelinelabs:conductor-autodispose:$versions.conductor",
         dagger                  : "com.google.dagger:dagger:$versions.dagger",
-        dagger_compiler         : "com.google.dagger:dagger-compiler:$versions.dagger_compiler",
+        dagger_compiler         : "com.google.dagger:dagger-compiler:$versions.dagger",
         rxjava                  : "io.reactivex.rxjava2:rxjava:$versions.rxjava",
         rxandroid               : "io.reactivex.rxjava2:rxandroid:$versions.rxandroid",
+        base                    : ":base",
         feature1                : ":feature1",
         feature2                : ":feature2",
+        common                  : ":common",
 
 
         //test

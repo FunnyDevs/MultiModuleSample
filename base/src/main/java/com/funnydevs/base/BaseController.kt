@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import com.bluelinelabs.conductor.Controller
+import com.bluelinelabs.conductor.autodispose.ControllerScopeProvider
 import com.funnydevs.base.di.BaseViewModelFactory
 import javax.inject.Inject
 
@@ -39,5 +40,4 @@ abstract class BaseController<G: BaseViewModel>(args: Bundle?) : Controller(args
     }
 
 
-    fun BaseController<out BaseViewModel>.coreComponent() = BaseApplication.coreComponent(activity!!)
 }

@@ -19,6 +19,8 @@ android {
 dependencies {
     implementation project(libraries.feature1)
     implementation project(libraries.feature2)
+
+    kapt libraries.dagger_compiler
 }
 androidExtensions {
     experimental = true

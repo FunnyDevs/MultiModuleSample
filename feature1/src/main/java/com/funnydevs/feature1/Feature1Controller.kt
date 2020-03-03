@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.bluelinelabs.conductor.changehandler.SimpleSwapChangeHandler
 import com.funnydevs.base.BaseController
 import com.funnydevs.feature1.di.DaggerFeature1Component
+import com.funnydevs.hoop.common.di.AppInjectHelper
 
 
 class Feature1Controller(args: Bundle?) : BaseController<Feature1ViewModel>(args) {
@@ -34,7 +35,7 @@ class Feature1Controller(args: Bundle?) : BaseController<Feature1ViewModel>(args
     override fun injectDependencies() {
 
         DaggerFeature1Component.factory()
-            .create(args,coreComponent())
+            .create(args, AppInjectHelper.provideCoreComponent(applicationContext!!))
             .inject(this)
 
     }

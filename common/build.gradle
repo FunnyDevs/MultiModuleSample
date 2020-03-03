@@ -1,7 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: "kotlin-kapt"
 apply from: "$rootProject.projectDir/config.gradle"
 
 android {
@@ -17,16 +16,5 @@ android {
 }
 
 dependencies {
-    api project(libraries.common)
-    kapt libraries.dagger_compiler
-
-
-    testImplementation libraries.junit
-    androidTestImplementation libraries.runner
-    androidTestImplementation libraries.espresso_core
-}
-
-
-androidExtensions {
-    experimental = true
+    api project(libraries.base)
 }

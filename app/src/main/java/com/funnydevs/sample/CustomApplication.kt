@@ -1,16 +1,14 @@
 package com.funnydevs.sample
 
-import com.funnydevs.base.BaseApplication
+import android.app.Application
+import com.funnydevs.hoop.common.di.AppComponent
+import com.funnydevs.hoop.common.di.AppComponentProvider
 
-class CustomApplication : BaseApplication()
+class CustomApplication : Application(), AppComponentProvider
 {
+    private lateinit var coreComponent: AppComponent
 
-
-
-    override fun onTrimMemory(level: Int) {
-        super.onTrimMemory(level)
-
-    }
+    override fun provideCoreComponent(): AppComponent = coreComponent
 
 
 }

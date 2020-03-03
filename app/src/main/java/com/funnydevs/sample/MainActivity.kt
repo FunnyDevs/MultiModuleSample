@@ -5,7 +5,9 @@ import com.bluelinelabs.conductor.Router
 import com.bluelinelabs.conductor.changehandler.SimpleSwapChangeHandler
 import com.funnydevs.base.BaseActivity
 import com.funnydevs.base.navigator.NavigationModel
+import com.funnydevs.hoop.common.di.AppInjectHelper
 import com.funnydevs.sample.di.DaggerActivityComponent
+import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
 class MainActivity : BaseActivity() {
@@ -20,7 +22,7 @@ class MainActivity : BaseActivity() {
 
         DaggerActivityComponent
             .factory()
-            .create(this,root,savedInstanceState,coreComponent())
+            .create(this,root,savedInstanceState, AppInjectHelper.provideCoreComponent(applicationContext))
             .inject(this)
 
         navigator.goTo(

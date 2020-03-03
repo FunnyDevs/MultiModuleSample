@@ -26,6 +26,7 @@ dependencies {
     api libraries.appcompat
     api libraries.lifecycle_extensions
     api libraries.conductor
+    api libraries.conductor_autodispose
     api libraries.dagger
     api libraries.rxjava
     api libraries.rxandroid

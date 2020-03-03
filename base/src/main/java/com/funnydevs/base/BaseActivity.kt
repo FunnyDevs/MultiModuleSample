@@ -15,7 +15,12 @@ abstract class BaseActivity: AppCompatActivity() {
     }
 
 
-    fun BaseActivity.coreComponent() = BaseApplication.coreComponent(this)
+    override fun onBackPressed() {
+        if (!navigator.handleBack()) {
+            super.onBackPressed();
+        }
+    }
+
 
     internal fun getNavigator() = navigator
 }

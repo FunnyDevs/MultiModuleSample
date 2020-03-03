@@ -1,8 +1,8 @@
 package com.funnydevs.feature1.di
 
 import android.os.Bundle
-import com.funnydevs.base.di.AppComponent
 import com.funnydevs.feature1.Feature1Controller
+import com.funnydevs.hoop.common.di.AppComponent
 import dagger.BindsInstance
 import dagger.Component
 

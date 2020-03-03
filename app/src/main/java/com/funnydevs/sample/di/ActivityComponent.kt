@@ -2,8 +2,8 @@ package com.funnydevs.sample.di
 
 import android.os.Bundle
 import android.view.ViewGroup
-import com.funnydevs.base.di.AppComponent
 import com.funnydevs.base.BaseActivity
+import com.funnydevs.hoop.common.di.AppComponent
 import com.funnydevs.sample.MainActivity
 import dagger.BindsInstance
 import dagger.Component
