@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
-import com.toothpicksample.common.BaseController
-import com.toothpicksample.feature1.di.DaggerFeature2Component
+import com.funnydevs.base.BaseController
+import com.funnydevs.feature1.di.DaggerFeature2Component
 
 class Feature2Controller(args: Bundle?) : BaseController<Feature2ViewModel>(args) {
 

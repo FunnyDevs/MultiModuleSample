@@ -7,6 +7,7 @@ apply from: "$rootProject.projectDir/config.gradle"
 android {
 
 
+
     buildTypes {
         release {
             minifyEnabled false
@@ -17,9 +18,25 @@ android {
 }
 
 dependencies {
-    kapt libraries.dagger_compiler
-}
 
+    kapt libraries.dagger_compiler
+
+    api libraries.kotlin
+    api libraries.constraintlayout
+    api libraries.appcompat
+    api libraries.lifecycle_extensions
+    api libraries.conductor
+    api libraries.dagger
+    api libraries.rxjava
+    api libraries.rxandroid
+
+
+    testImplementation libraries.junit
+    androidTestImplementation libraries.runner
+    androidTestImplementation libraries.espresso_core
+
+
+}
 
 androidExtensions {
     experimental = true

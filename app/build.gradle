@@ -2,16 +2,11 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: "kotlin-kapt"
+apply from: "$rootProject.projectDir/config.gradle"
 
 android {
-    compileSdkVersion 28
     defaultConfig {
-        applicationId "com.toothpicksample.sample"
-        minSdkVersion 23
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        applicationId "com.funnydevs.sample"
     }
     buildTypes {
         release {
@@ -22,14 +17,8 @@ android {
 }
 
 dependencies {
-    implementation project(":feature1")
-    implementation project(":feature2")
-    def dagger = "2.24"
-
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
-    kapt "com.google.dagger:dagger-compiler:$dagger"
+    implementation project(libraries.feature1)
+    implementation project(libraries.feature2)
 }
 androidExtensions {
     experimental = true

@@ -1,9 +1,9 @@
-package com.toothpicksample.feature1.di
+package com.funnydevs.feature1.di
 
 import android.os.Bundle
 import com.funnydevs.feature2.Feature2Controller
 import com.funnydevs.feature2.di.Feature2Scope
-import com.toothpicksample.common.di.AppComponent
+import com.funnydevs.base.di.AppComponent
 import dagger.BindsInstance
 import dagger.Component
 

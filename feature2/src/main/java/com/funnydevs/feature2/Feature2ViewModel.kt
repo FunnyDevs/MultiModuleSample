@@ -1,7 +1,7 @@
 package com.funnydevs.feature2
 
-import com.toothpicksample.common.BaseViewModel
-import com.toothpicksample.common.rx.BaseSchedulerManager
+import com.funnydevs.base.BaseViewModel
+import com.funnydevs.base.rx.BaseSchedulerManager
 import javax.inject.Inject
 
 class Feature2ViewModel @Inject constructor(baseSchedulerManager: BaseSchedulerManager,val prova: String?): BaseViewModel(baseSchedulerManager) {
